@@ -21,7 +21,7 @@ We recommend using a virtual environment.
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/srijarkoroy/App2App.git
+git clone https://github.com/Sanchita0812/App2App
 cd App2App
 ```
 
@@ -66,11 +66,53 @@ How to use it:
 
 - Open Postman and choose Import -> File, then select `tests/App2App.postman_collection.json` (or drag the file into Postman).
 - The collection contains two folders: `Main` (build/revise/health) and `Eval` (evaluation endpoints).
-- The requests in the collection point to the hosted endpoints (for example `https://app2app.onrender.com` and `https://app2appeval.onrender.com`). That means you can send requests immediately after importing — you only need to edit the JSON payload's `brief` field to describe the task you want to submit.
+- The requests in the collection point to the hosted endpoints (for example `https://app2app-5uc9.onrender.com` and `https://app2app-evaluate.onrender.com`). That means you can send requests immediately after importing — you only need to edit the JSON payload's `brief` field to describe the task you want to submit.
 - If you want to test against a local server instead, update the request URL or use a Postman environment set to `http://localhost:8000` (or wherever your instance is running). Also update `evaluation_url` in the JSON body if you want evaluation callbacks pointed at a different URL.
 - Ensure requests use the `Content-Type: application/json` header when sending JSON bodies.
 
 Quick note: start the API with the uvicorn command above before running collection requests against your local instance.
+
+## Execute from Terminal (curl)
+
+You can send a build/revise request directly from the terminal using curl against the hosted endpoint. Change the `brief` field in the JSON to describe your task.
+
+```bash
+curl -X POST https://app2app-5uc9.onrender.com/ \
+ -H "Content-Type: application/json" \
+ -d '{
+	"email": "sanchitakiran08@gmail.com",
+	"secret": "tds",
+	"task": "captcha-solver-001",
+	"round": 1,
+	"nonce": "1234",
+	"brief": "Create a captcha solver",
+	"checks": ["Repo has MIT license"],
+	"evaluation_url": "https://app2app-5uc9.onrender.com/notify",
+	"attachments": []
+}'
+```
+
+Notes:
+
+- The example above posts to the hosted URL (no local server required) — update the URL to `http://localhost:8000/` if you prefer to hit a local instance.
+- Edit `brief` (and other fields) as needed before sending.
+- To submit a revision request set `"round": 2` in the payload (the collection's `Revise - Round2` request already uses round 2).
+
+```bash
+curl -X POST https://app2app-5uc9.onrender.com/ \
+ -H "Content-Type: application/json" \
+ -d '{
+	"email": "sanchitakiran08@gmail.com",
+	"secret": "tds",
+	"task": "captcha-solver-001",
+	"round": 2,
+	"nonce": "1234",
+	"brief": "Add support for SVG Images",
+	"checks": ["Repo has MIT license"],
+	"evaluation_url": "https://app2app-5uc9.onrender.com/notify",
+	"attachments": []
+}'
+```
 
 ## Running tests
 
@@ -114,4 +156,3 @@ This repository includes a `LICENSE` file — follow the terms there.
 If you have questions or want help getting started, open an issue in the repository.
 
 ---
-# App2App
