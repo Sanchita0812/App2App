@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
+openai
+pygithub
+requests
+google-genai
+gitpython
+playwright
+pydantic

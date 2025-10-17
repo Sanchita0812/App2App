@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: llm-code-deployment-main
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start_main.sh
+    envVars:
+      - key: STUDENT_SECRET
+        fromDatabase: true
+      - key: GITHUB_USER
+        fromDatabase: true
+      - key: GITHUB_TOKEN
+        fromDatabase: true
+      - key: OPENAI_API_KEY
+        fromDatabase: true
+      - key: GOOGLE_API_KEY
+        fromDatabase: true
+
+  - type: web
+    name: llm-code-deployment-eval
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start_eval.sh
+    envVars:
+      - key: STUDENT_SECRET
+        fromDatabase: true
+      - key: GITHUB_USER
+        fromDatabase: true
+      - key: GITHUB_TOKEN
+        fromDatabase: true
+      - key: OPENAI_API_KEY
+        fromDatabase: true
+      - key: GOOGLE_API_KEY
+        fromDatabase: true
