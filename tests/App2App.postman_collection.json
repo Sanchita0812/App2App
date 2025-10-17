@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "a562b030-43f1-4827-982f-4cfa72227362",
+		"_postman_id": "f8eae0dc-ca1b-4edc-9c9b-4fd5c6edb590",
 		"name": "App2App",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "49336769",
-		"_collection_link": "https://srijarko-3473432.postman.co/workspace/Srijarko-Roy's-Workspace~e373109c-de8e-4b68-88a8-4f263e128b2e/collection/49336769-a562b030-43f1-4827-982f-4cfa72227362?action=share&source=collection_link&creator=49336769"
+		"_exporter_id": "49349602",
+		"_collection_link": "https://sanchitakiran08-2965868.postman.co/workspace/Sanchita-Kiran's-Workspace~7ca09c73-39c7-4828-85af-867feecfae64/collection/49349602-f8eae0dc-ca1b-4edc-9c9b-4fd5c6edb590?action=share&source=collection_link&creator=49349602"
 	},
 	"item": [
 		{
@@ -28,7 +28,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"srijarko@gmail.com\",\n    \"secret\": \"cutu\",\n    \"task\": \"captcha-solver-001\",\n    \"round\": 1,\n    \"nonce\": \"1234\",\n    \"brief\": \"Create a captcha solver\",\n    \"checks\": [\"Repo has MIT license\"],\n    \"evaluation_url\": \"https://app2appeval.onrender.com/notify\",\n    \"attachments\": []\n}",
+							"raw": "{\n    \"email\": \"sanchitakiran08@gmail.com\",\n    \"secret\": \"tds\",\n    \"task\": \"captcha-solver-002\",\n    \"round\": 1,\n    \"nonce\": \"1234\",\n    \"brief\": \"Create a captcha solver\",\n    \"checks\": [\"Repo has MIT license\"],\n    \"evaluation_url\": \"https://app2app-evaluate.onrender.com/\",\n    \"attachments\": []\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -36,10 +36,10 @@
 							}
 						},
 						"url": {
-							"raw": "https://app2app.onrender.com/",
+							"raw": "https://app2app-5uc9.onrender.com/",
 							"protocol": "https",
 							"host": [
-								"app2app",
+								"app2app-5uc9",
 								"onrender",
 								"com"
 							],
@@ -68,7 +68,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"srijarko@gmail.com\",\n    \"secret\": \"cutu\",\n    \"task\": \"captcha-solver-001\",\n    \"round\": 2,\n    \"nonce\": \"1234\",\n    \"brief\": \"Create a captcha solver with support for SVG\",\n    \"checks\": [\"Repo has MIT license\"],\n    \"evaluation_url\": \"https://app2appeval.onrender.com/notify\",\n    \"attachments\": []\n}",
+							"raw": "{\n    \"email\": \"sanchitakiran08@gmail.com\",\n    \"secret\": \"tds\",\n    \"task\": \"captcha-solver-002\",\n    \"round\": 2,\n    \"nonce\": \"1234\",\n    \"brief\": \"Create a captcha solver with support for SVG\",\n    \"checks\": [\"Repo has MIT license\"],\n    \"evaluation_url\": \"https://app2app-evaluate.onrender.com//notify\",\n    \"attachments\": []\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -76,10 +76,10 @@
 							}
 						},
 						"url": {
-							"raw": "https://app2app.onrender.com/",
+							"raw": "https://app2app-5uc9.onrender.com/",
 							"protocol": "https",
 							"host": [
-								"app2app",
+								"app2app-5uc9",
 								"onrender",
 								"com"
 							],
@@ -143,10 +143,10 @@
 							}
 						],
 						"url": {
-							"raw": "https://app2appeval.onrender.com/results",
+							"raw": "https://app2app-evaluate.onrender.com/results",
 							"protocol": "https",
 							"host": [
-								"app2appeval",
+								"app2app-evaluate",
 								"onrender",
 								"com"
 							],
